@@ -31,6 +31,11 @@ spring:
           text:
             model: gemini-embedding-001
             dimensions: 1536
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: ALWAYS
 server:
   port: 8081
 

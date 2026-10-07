@@ -16,13 +16,15 @@ public class AiController {
     private final AiService service;
 
     @PostMapping
-    public ResponseEntity<String> getResponse(@RequestBody String query){
-        return null;
+    public ResponseEntity<String> getResponse(@RequestBody String query, @RequestHeader("ConversationId") String conversationId){
+
+        return ResponseEntity.ok(service.getResponseFromAssistant(query,conversationId));
     }
 
     @PostMapping(value = "/stream")
-    public Flux<String> streamResponse(@RequestBody String query){
-        return null;
+    public Flux<String> streamResponse(@RequestBody String query,@RequestHeader("ConversationId") String conversationId){
+
+        return this.service.streamResponseFromAssistant(query, conversationId);
     }
 
 }
