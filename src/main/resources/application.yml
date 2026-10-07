@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: "help-desk-backend"
+#DataSource configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_ai?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+# AI Configurations
+  ai:
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY}
+        chat:
+          model: gemini-3.6-flash
+          temperature: 0.7
+#custom model
+          embedding:
+            text: google-genai
+        embedding:
+          api-key: ${GEMINI_API_KEY}
+          text:
+            model: gemini-embedding-001
+            dimensions: 1536
+server:
+  port: 8081
+
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG
+
+#Databas configuration
+
+
+
+
+
