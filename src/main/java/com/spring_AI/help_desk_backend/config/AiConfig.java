@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 @Configuration
 public class AiConfig {
 
-    private Logger logger = LoggerFactory.getLogger(AiConfig.class);
+    private Logger logger = (Logger) LoggerFactory.getLogger(AiConfig.class);
 
 //    public JdbcChatMemoryRepository jdbcChatMemoryRepository(){
 //        return JdbcChatMemoryRepository.builder()
