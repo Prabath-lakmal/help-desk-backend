@@ -3,7 +3,7 @@ spring:
     name: "help-desk-backend"
 #DataSource configuration
   datasource:
-    url: jdbc:mysql://localhost:3306/spring_ai?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/spring_ai_help_desk?useSSL=false&serverTimezone=UTC
     username: root
     password: root
 

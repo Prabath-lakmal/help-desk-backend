@@ -20,7 +20,7 @@ public class Ticket implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Lob
     private String summary;
@@ -47,7 +47,7 @@ public class Ticket implements Serializable {
         if (this.createdOn == null){
             this.createdOn = LocalDateTime.now();
         }
-        this.createdOn = LocalDateTime.now();
+        this.updatedOn = this.createdOn;
     }
 
     @PreUpdate

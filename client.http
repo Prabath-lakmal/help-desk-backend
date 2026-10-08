@@ -1,0 +1,2 @@
+POST localhost:8081/api/v1/helpdesk/stream
+#"Request headers = conversationId=1" then body -> text - type what is your issue and and provide email for ticket
